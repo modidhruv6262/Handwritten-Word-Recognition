@@ -37,7 +37,7 @@ def load_assets():
     if not os.path.exists(MODEL_FILE):
         st.error(f"❌ '{MODEL_FILE}' not found!")
         st.stop()
-    model = tf.keras.models.load_model(MODEL_FILE)
+    model = tf.keras.models.load_model(MODEL_FILE, compile=False)
     
     return model, num_to_char
 
